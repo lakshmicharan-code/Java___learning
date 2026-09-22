@@ -1,0 +1,38 @@
+public class Sample {
+	int a;
+	int b;
+public void setdata(int x, int y)
+{
+	a=x;
+	b=y;
+	}
+public void dispAB()
+{
+	System.out.println(a+"\t"+b);
+}
+}
+public class Test extends Sample
+{
+	int c;
+	int d;
+	public void setdata(int x,int y,int z,int f)
+	{
+		setdata(x,y);
+		c=z;
+		d=f;
+	}
+	public void display()
+	{
+		dispAB();
+		System.out.println(c+"\t"+d);
+	}
+}
+public class Inheritance {
+	public static void main(String[] args) {
+		Test t1 = new Test();
+		t1.setdata(10,20,30,40);
+		t1.display();
+	}
+}
+
+
