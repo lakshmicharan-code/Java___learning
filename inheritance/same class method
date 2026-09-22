@@ -1,0 +1,32 @@
+super class method can be called by using sub class method
+public class Sample {
+	public void show(){
+		System.out.println("Sample show");
+	}
+	public void display()
+	{
+		System.out.println("sample show");
+		}
+}
+public class Test extends Sample
+{
+	public void show()
+	{
+		System.out.println("Test show");
+	}
+	public void display()
+	{
+		super.show();//to call parent class from the child class method
+		this.show();// to call the current class method
+		show();// to call the current class method by without using this key word
+	System.out.println("Test display");
+	}
+}
+public class Inheritance {
+
+	public static void main(String[] args) {
+		Test t1 = new Test();
+		t1.display();
+	}
+
+}
