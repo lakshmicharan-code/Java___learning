@@ -1,0 +1,40 @@
+public class Sample {
+    private int a;
+    private int b;
+
+    public void setData(int x, int y) {
+        a = x;
+        b = y;
+    }
+
+    public void display() {
+        System.out.println(a + " " + b);
+    }
+}
+
+public class Test extends Sample {
+    private int a;
+    private int b;
+
+    public void setData(int x, int y, int z, int k) {
+        // super.a = x;   // Invalid: a is private in Sample
+        // super.b = y;   // Invalid: b is private in Sample
+
+        a = z;       // Test's own member
+        b = k;       // Test's own member
+    }
+
+    public void display() {
+        super.display();
+        System.out.println(a + " " + b);
+    }
+}
+
+public class InheritTest {
+    public static void main(String[] args) {
+        Test t1 = new Test();
+
+        t1.setData(1, 2, 3, 4);
+        t1.display();
+    }
+}
