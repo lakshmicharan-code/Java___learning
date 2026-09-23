@@ -1,0 +1,41 @@
+class Company {
+    String companyName = "Tech Solutions";
+
+    void showCompany() {
+        System.out.println("Company: " + companyName);
+    }
+}
+
+class Employee extends Company {
+    String name = "Charan";
+
+    void showEmployee() {
+        System.out.println("Employee: " + name);
+    }
+}
+
+class Developer extends Employee {
+    String language = "Java";
+
+    void showDeveloper() {
+        System.out.println("Language: " + language);
+    }
+}
+
+class JavaDeveloper extends Developer {
+    void showWork() {
+        System.out.println("Work: Java Application Development");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        JavaDeveloper obj = new JavaDeveloper();
+
+        obj.showCompany();
+        obj.showEmployee();
+        obj.showDeveloper();
+        obj.showWork();
+    }
+}
