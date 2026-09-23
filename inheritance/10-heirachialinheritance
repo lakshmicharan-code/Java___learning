@@ -1,0 +1,33 @@
+class Employee {
+    String name = "Charan";
+
+    void showEmployee() {
+        System.out.println("Employee: " + name);
+    }
+}
+
+class Developer extends Employee {
+    void coding() {
+        System.out.println("Developer is coding");
+    }
+}
+
+class Tester extends Employee {
+    void testing() {
+        System.out.println("Tester is testing");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Developer d = new Developer();
+        Tester t = new Tester();
+
+        d.showEmployee();
+        d.coding();
+
+        t.showEmployee();
+        t.testing();
+    }
+}
