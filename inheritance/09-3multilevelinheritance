@@ -1,0 +1,32 @@
+class Bank {
+    void bankName() {
+        System.out.println("Bank: ABC Bank");
+    }
+}
+
+class Account extends Bank {
+    int accountNumber = 12345;
+
+    void showAccount() {
+        System.out.println("Account Number: " + accountNumber);
+    }
+}
+
+class SavingsAccount extends Account {
+    double balance = 25000;
+
+    void showBalance() {
+        System.out.println("Balance: " + balance);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        SavingsAccount obj = new SavingsAccount();
+
+        obj.bankName();
+        obj.showAccount();
+        obj.showBalance();
+    }
+}
