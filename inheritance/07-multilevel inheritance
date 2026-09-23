@@ -1,0 +1,27 @@
+class Employee {
+    void work() {
+        System.out.println("Employee is working");
+    }
+}
+
+class Developer extends Employee {
+    void coding() {
+        System.out.println("Developer is coding");
+    }
+}
+
+class JavaDeveloper extends Developer {
+    void java() {
+        System.out.println("Java Developer is writing Java programs");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        JavaDeveloper obj = new JavaDeveloper();
+
+        obj.work();
+        obj.coding();
+        obj.java();
+    }
+}
