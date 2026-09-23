@@ -1,0 +1,33 @@
+class Company {
+    String companyName = "Tech Solutions";
+
+    void showCompany() {
+        System.out.println("Company: " + companyName);
+    }
+}
+
+class JavaTeam extends Company {
+    void javaWork() {
+        System.out.println("Java Team develops Java applications");
+    }
+}
+
+class PythonTeam extends Company {
+    void pythonWork() {
+        System.out.println("Python Team develops Python applications");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        JavaTeam j = new JavaTeam();
+        PythonTeam p = new PythonTeam();
+
+        j.showCompany();
+        j.javaWork();
+
+        p.showCompany();
+        p.pythonWork();
+    }
+}
