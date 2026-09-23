@@ -1,0 +1,39 @@
+class BankAccount {
+    int accountNumber = 12345;
+    double balance = 25000;
+
+    void showAccount() {
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Balance: " + balance);
+    }
+}
+
+class SavingsAccount extends BankAccount {
+    void savingsInterest() {
+        System.out.println("Savings Interest: 5%");
+    }
+}
+
+class CurrentAccount extends BankAccount {
+    void overdraft() {
+        System.out.println("Overdraft Facility: Available");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        SavingsAccount s = new SavingsAccount();
+        CurrentAccount c = new CurrentAccount();
+
+        System.out.println("Savings Account:");
+        s.showAccount();
+        s.savingsInterest();
+
+        System.out.println();
+
+        System.out.println("Current Account:");
+        c.showAccount();
+        c.overdraft();
+    }
+}
