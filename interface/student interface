@@ -1,0 +1,16 @@
+interface Student {
+    void study();
+}
+
+class CSE implements Student {
+    public void study() {
+        System.out.println("CSE student is studying Java");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        CSE c = new CSE();
+        c.study();
+    }
+}
