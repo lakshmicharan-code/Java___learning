@@ -1,0 +1,27 @@
+interface Programmer {
+    void code();
+}
+
+interface Tester {
+    void test();
+}
+
+class SoftwareEngineer implements Programmer, Tester {
+
+    public void code() {
+        System.out.println("Writing Java code");
+    }
+
+    public void test() {
+        System.out.println("Testing the application");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        SoftwareEngineer s = new SoftwareEngineer();
+
+        s.code();
+        s.test();
+    }
+}
