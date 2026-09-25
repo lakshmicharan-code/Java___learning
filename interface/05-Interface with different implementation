@@ -1,0 +1,25 @@
+interface Payment {
+    void pay();
+}
+
+class CreditCard implements Payment {
+    public void pay() {
+        System.out.println("Payment through Credit Card");
+    }
+}
+
+class NetBanking implements Payment {
+    public void pay() {
+        System.out.println("Payment through Net Banking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Payment p1 = new CreditCard();
+        Payment p2 = new NetBanking();
+
+        p1.pay();
+        p2.pay();
+    }
+}
