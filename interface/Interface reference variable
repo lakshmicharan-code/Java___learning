@@ -1,0 +1,23 @@
+interface Printer {
+    void print();
+}
+
+class LaserPrinter implements Printer {
+
+    public void print() {
+        System.out.println("Laser printer is printing");
+    }
+
+    public void scan() {
+        System.out.println("Scanning document");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Printer p = new LaserPrinter();
+
+        p.print();
+    }
+}
