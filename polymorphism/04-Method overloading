@@ -1,0 +1,18 @@
+class Area {
+
+    void calculate(int side) {
+        System.out.println("Square Area: " + (side * side));
+    }
+
+    void calculate(int length, int breadth) {
+        System.out.println("Rectangle Area: " + (length * breadth));
+    }
+
+    public static void main(String[] args) {
+
+        Area obj = new Area();
+
+        obj.calculate(5);
+        obj.calculate(10, 5);
+    }
+}
