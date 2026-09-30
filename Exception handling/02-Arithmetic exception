@@ -1,0 +1,24 @@
+public class Test
+{
+public static void main(String[] args)
+{
+System.out.println("main start");
+try
+{
+System.out.println("try start");
+int a=10;
+int b;
+int n=args.length;
+b=a/n;
+System.out.println("result:"+b);
+System.out.println("try end");
+}
+catch(ArithmeticException e)
+{
+System.out.println(e.getMessage());
+String msg = e.getMessage();//this is to get message from java
+System.out.println("divide by zero error"+msg);
+e.printStackTrace();
+}
+}
+}
