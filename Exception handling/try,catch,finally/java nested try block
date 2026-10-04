@@ -1,0 +1,43 @@
+public class Test {
+
+    public static void main(String[] args) {
+
+        System.out.println("main start");
+
+        try {
+            System.out.println("outer try start");
+
+            int a = 10;
+            int n = args.length;
+            int b = a / n;
+
+            System.out.println("b = " + b);
+
+            try {
+                System.out.println("Inner try start");
+
+                System.out.println("First param " + args[0]);
+                System.out.println("Second param " + args[1]);
+                System.out.println("Third param " + args[2]);
+
+                System.out.println("Inner try end");
+            }
+            catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Inner try array index exception");
+            }
+            finally {
+                System.out.println("Inner try finally");
+            }
+
+            System.out.println("outer try end");
+        }
+        catch (ArithmeticException e) {
+            System.out.println("outside try divide by zero exception");
+        }
+        finally {
+            System.out.println("outer try finally");
+        }
+
+        System.out.println("main end");
+    }
+}
