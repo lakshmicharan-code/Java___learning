@@ -1,0 +1,44 @@
+// User-defined Exception
+class InsufficientBalanceException extends Exception {
+
+    InsufficientBalanceException(String message) {
+        super(message);
+    }
+}
+
+public class BankAccount {
+
+    static void withdraw(double balance, double amount)
+            throws InsufficientBalanceException {
+
+        if (amount > balance) {
+            throw new InsufficientBalanceException(
+                    "Insufficient balance! Available balance is: " + balance);
+        }
+
+        balance = balance - amount;
+
+        System.out.println("Withdrawal successful!");
+        System.out.println("Withdrawn amount: " + amount);
+        System.out.println("Remaining balance: " + balance);
+    }
+
+    public static void main(String[] args) {
+
+        double balance = 5000;
+        double amount = 6500;
+
+        System.out.println("Account Balance: " + balance);
+        System.out.println("Withdrawal Amount: " + amount);
+
+        try {
+            withdraw(balance, amount);
+        }
+        catch (InsufficientBalanceException e) {
+            System.out.println("Transaction Failed!");
+            System.out.println("Exception: " + e.getMessage());
+        }
+
+        System.out.println("Program execution completed.");
+    }
+}
