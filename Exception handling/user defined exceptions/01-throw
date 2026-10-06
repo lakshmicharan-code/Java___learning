@@ -1,0 +1,53 @@
+public class Test
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("main start");
+		try
+		{
+			System.out.println("try start");
+			int a=10;
+			int n=args.length;
+			if(n==0)
+			{
+				throw new SampleException("sample user defined exception");
+			}
+			int b=a/n;
+			System.out.println("first param"+args[0]);
+			System.out.println("secound param"+args[1]);
+			System.out.println("third exception"+args[2]);
+			System.out.println("try end");
+		}
+			catch(SampleException e)
+			{
+				System.out.println(e.getMessage());
+				System.out.println(e);
+			}
+		
+	}
+}
+public class SampleException extends Exception{
+	
+	private String message;
+	public SampleException()
+	{
+		message=null;
+	
+	}
+	public SampleException(String message)
+	{
+		this.message=message;
+	}
+
+	public	String getMessage()
+	{
+		//to do auto generated method stub
+		return message;
+	}
+
+	public String toString()
+	{
+		//  to auto generated message stub
+		return message;
+}
+}
