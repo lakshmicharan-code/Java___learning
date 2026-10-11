@@ -1,0 +1,12 @@
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String record = "1001:neo:25:5000:male";
+		
+		
+		String [] fields = record.split(":");		
+		
+			System.out.println(fields[0]+"\t"+fields[1]+"\t"+fields[4]);
+	}
+}
