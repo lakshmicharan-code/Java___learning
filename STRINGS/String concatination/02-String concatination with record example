@@ -1,0 +1,18 @@
+public class Sample {
+
+	public static void main(String[] args) {
+		
+		int eno=1001;
+		String ename="ram";
+		String job="manager";
+		double sal = 50000.50;
+		String dept="admin";
+		String gender="male";
+		int age = 25;
+		
+		String record = eno+","+ename+","+job+","+sal+","+dept+","+gender+","+age;
+			
+		
+		System.out.println(record);	
+	}
+}
