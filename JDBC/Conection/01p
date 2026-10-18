@@ -1,0 +1,25 @@
+package com.perplexity.charan.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Xyzconn {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		String url = "jdbc:mysql://localhost:3306/appleworkspace";
+		String un = "root";
+		String pw = "root";
+		Connection con = DriverManager.getConnection(url,un,pw);
+		if(con!=null)
+		{
+			System.out.println("connected");
+		}
+		else
+		{
+			System.out.println("not connected");
+		}
+	}
+
+}
